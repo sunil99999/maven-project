@@ -8,7 +8,7 @@ stages{
 
             steps {
 
-                sh 'mvn clean package'
+                bat 'mvn clean package'
 
             }
 
@@ -17,7 +17,7 @@ stages{
                 success {
 
                     echo 'Now Archiving...'
-                    
+
                     archiveArtifacts artifacts: '**/target/*.war'
 
                 }
